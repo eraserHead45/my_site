@@ -1,9 +1,55 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     My blog
 {% endblock %}
 
+{% block css_files%}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
 {% block content %}
-    <h1>My blog</h1>
+    <header id="main-navigation">
+        <h1><a herf="">Humanity Blog</a></h1>
+        <nav>
+            <a herf="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Pain-The Author Of This Blog"/>
+            <h2>PAIN'S BLOG</h2>
+            <p>Those who don't know the true pain will never understand the true peace</p>
+        </header>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a herf="">
+                        <img src="" alt="Mountain Hiking"/>
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>Mountain Hiking is a great way to get out and enjoy the outdoors. There's nothing like the views you get when hiking in the moutains!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+        
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            I am a software developer who loves to code. I have been coding for over 3 years
+        </P>
+        <p>
+            My goal is to keep on growing as a developer - and help my family
+        </P>
+    </section>
 {% endblock %}
